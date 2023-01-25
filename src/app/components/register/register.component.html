@@ -1,0 +1,13 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <p class="text-success" *ngIf="toast==='success'">Registeration Success!<br></p>
+    <p>UserName</p><input class="form-control form-control-sm" type="text" #username>
+    <p class="text-danger" *ngIf="toast==='userlen'">{{message}}<br></p>
+    <p>Password</p><input class="form-control form-control-sm" type="password" #password1><br>
+    <p class="text-danger" *ngIf="toast==='passmiss'">Password Missmatch!<br></p>
+    <p class="text-danger" *ngIf="toast==='passlen'">Password length must be greater than 8!<br></p>
+    <p>Password again</p><input class="form-control form-control-sm" type="password" #password2><br>
+    <input type="submit" value="Register" class="btn btn-info mt-2" (click)="Register(username.value,password1.value,password2.value)"><br>
+    <p class="text-success" *ngIf="toast==='success'">Please login!</p><br>
+    <p>already have an account </p><button class="btn btn-link" (click)="change_mode_value()">login here</button>
+
+</div>

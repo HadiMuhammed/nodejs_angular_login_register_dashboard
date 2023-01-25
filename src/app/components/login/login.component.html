@@ -1,0 +1,9 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <p>UserName</p><input class="form-control form-control-sm" type="text" #username>
+    <p>Password</p><input class="form-control form-control-sm" type="password" #password><br>
+    <input type="submit" value="Login" class="btn btn-primary mt-2" (click)="Login(username.value,password.value)"><br>
+    <br><span *ngIf="passfail=='failed'" class="text-danger">Password or username is incorrect</span>
+    <p>Don't have an account </p><button class="btn btn-link" (click)="change_mode_value()">click to register</button>
+
+</div>
+
